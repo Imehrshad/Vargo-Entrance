@@ -1,0 +1,90 @@
+@import 'animate.css';
+.spanContainer{
+    filter: blur(300px);
+    .firstSpan{
+        background-color: #03a0e4;
+        opacity: 0.5;
+        top: 20%;
+        left: 50%;
+        animation: firstspan 6s  linear infinite;
+        @keyframes firstspan {
+            0% {
+                transform: rotate(0deg) 
+                    translateX(100px) rotate(0deg);
+            }
+  
+            100% {
+                transform: rotate(-360deg) 
+                    translateX(100px) rotate(360deg);
+            }
+        }
+    }
+    .secondSpan{
+        background-color: #026aa6;
+        opacity: 0.5;   
+        top: 60%;
+        left: 10%;
+        animation: secondspan 6s  linear infinite;
+        @keyframes secondspan {
+            0% {
+                transform: rotate(0deg) 
+                    translateX(100px) rotate(0deg);
+            }
+  
+            100% {
+                transform: rotate(-360deg) 
+                    translateX(100px) rotate(360deg);
+            }
+        }
+    }
+    .thirdSpan{
+        background-color: #03a0e4;
+        opacity: 0.5;   
+        top: 20%;
+        left: 60%;
+        animation: thirdspan 6s  linear infinite;
+        @keyframes thirdspan {
+            0% {
+                transform: rotate(0deg) 
+                    translateX(100px) rotate(90deg);
+            }
+  
+            100% {
+                transform: rotate(-360deg) 
+                    translateX(100px) rotate(360deg);
+            }
+        }
+    }
+    .right-span{
+        right: 0%;
+        top: 50%;
+        transition: all 700ms ;
+        opacity: 0;
+    }
+    .left-span{
+        left: 0%;
+        top: 50%;
+        opacity: 0;
+        transition: all 700ms ;
+    }
+}
+span{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    display: block;
+    clip-path: circle();
+}
+.span-opacity{
+    opacity: 1 !important;
+    transition: opacity 700ms ;
+}
+.yellow{
+    background-color: rgba(255, 255, 0, 0.575);
+}
+.green{
+    background-color: rgba(0, 255, 0, 0.562);
+}
+.red{
+    background-color: rgba(255, 0, 0, 0.568);
+}

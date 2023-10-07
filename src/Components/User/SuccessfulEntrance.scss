@@ -1,0 +1,73 @@
+@import 'animate.css';
+
+.profileContianer {
+    animation: fadeOut 500ms;
+    animation-delay: 1.5s;
+
+    img {
+        border-radius: 10px;
+        width: 250px;
+        height:300px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+.successful {
+    width: 100%;
+    padding: 1rem 5px;
+    border-radius: 10px;
+    color: white;
+    background: rgba(0, 255, 21, 0.404);
+    border-radius: 16px;
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
+.failed {
+    width: 100%;
+    padding: 1rem 5px;
+    border-radius: 10px;
+    color: white;
+    background: rgba(255, 30, 0, 0.329);
+    border-radius: 16px;
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
+.duplicate {
+    width: 100%;
+    padding: 1rem 5px;
+    border-radius: 10px;
+    color: white;
+    background: rgba(238, 255, 0, 0.404);
+    border-radius: 16px;
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 0;
+    }
+}

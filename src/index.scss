@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'PeydaMedium';
+    src: local('PeydaMedium'), url("./Fonts/PeydaWeb-Medium.woff2");
+}
+@font-face {
+    font-family: 'PeydaRegular';
+    src: local('PeydaRegular'), url("./Fonts/PeydaWeb-Regular.woff2");
+}
+@font-face {
+    font-family: 'PeydaSemiBold';
+    src: local('PeydaSemiBold'), url("./Fonts/PeydaWeb-SemiBold.woff2");
+}
+
+body{
+    font-family: "PeydaMedium";
+    background-color: #252525;
+}
+*{
+    font-family: "PeydaMedium";
+}
+#root{
+    overflow: hidden;
+}

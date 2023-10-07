@@ -1,0 +1,119 @@
+@import "../../variables";
+.usercontainer {
+  background: rgba(255, 255, 255, 0.096);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+  img {
+    width: 40%;
+    height: 50%;
+  }
+}
+
+.scan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+$width: 60%;
+
+.scan .fingerprint {
+  position: relative;
+  width: $width;
+  height: 0;
+  background-repeat: no-repeat;
+  padding-bottom: calc($width*1.2562);
+  background: url("../../assets/fingerPrint_01.png");
+  background-size: 100%;
+}
+
+.scan .fingerprint::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  padding-bottom: calc(100%*1.2562);
+  background: url("../../assets/fingerPrint_02.png");
+  background-size: 100%;
+  animation: animate 4s ease-in-out infinite;
+  background-repeat: no-repeat;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    padding-bottom: 0;
+  }
+
+  50% {
+    padding-bottom: calc(100%*1.2562);
+  }
+}
+
+.scan .fingerprint::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: $PrimaryColor;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 20px #026aa6) drop-shadow(0 0 60px $SecondColor);
+  animation: animate_line 4s ease-in-out infinite;
+}
+
+@keyframes animate_line {
+
+  0%,
+  100% {
+    top: 0%;
+  }
+
+  50% {
+    top: 100%;
+  }
+}
+
+.scan h3 {
+  font-family: $bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  color: $PrimaryColor;
+  filter: drop-shadow(0 0 20px $SecondColor) drop-shadow(0 0 60px #3fefef);
+  animation: animate_text 0.5s steps(1) infinite;
+}
+
+@keyframes animate_text {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.hidden-input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  cursor: default;
+
+}
+
+.failed {
+  width: 70%;
+  height: 100px;
+}
